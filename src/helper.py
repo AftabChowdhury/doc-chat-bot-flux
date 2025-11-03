@@ -1,10 +1,9 @@
 from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from sympy.polys.polyconfig import query
 
 
-#Extract Data From the PDF File
+#Load PDF Files
 def load_pdf_file(data):
     loader= DirectoryLoader(data,
                             glob="*.pdf",
